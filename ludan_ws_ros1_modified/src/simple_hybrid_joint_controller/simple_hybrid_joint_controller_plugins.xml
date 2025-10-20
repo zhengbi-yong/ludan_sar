@@ -1,0 +1,7 @@
+<library path="lib/libsimple_hybrid_joint_controller">
+  <class name="simple_hjc/AllJointsHybridController"
+         type="simple_hjc::AllJointsHybridController"
+         base_class_type="controller_interface::ControllerBase">
+    <description>Send pos/vel/kp/kd/ff to all 10 joints via HybridJointInterface.</description>
+  </class>
+</library>

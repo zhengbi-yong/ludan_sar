@@ -1,0 +1,62 @@
+<launch>
+  <!-- 加载全局映射文件 -->
+  <rosparam file="$(find moveit_movej_bridge)/config/joint_remap.yaml" command="load"/>
+
+  <!-- 右臂 -->
+  <group ns="right_arm_controller">
+    <node pkg="moveit_movej_bridge" type="ftj_to_movej_bridge" name="ftj_to_movej_bridge_rightarm" output="screen">
+      <param name="stream_rate" value="200"/>
+      <remap from="command_moveJ" to="/mcu_rightarm/all_joints_hjc/command_moveJ"/>
+      <!-- 把 YAML 中的 right_arm 节点部分加载到 joint_remap 参数下 -->
+      <rosparam param="joint_remap" command="load" file="$(find moveit_movej_bridge)/config/rightarm_joint_remap.yaml"/>
+    </node>
+  </group>
+
+  <!-- 左臂 -->
+  <group ns="left_arm_controller">
+    <node pkg="moveit_movej_bridge" type="ftj_to_movej_bridge" name="ftj_to_movej_bridge_leftarm" output="screen">
+      <param name="stream_rate" value="200"/>
+      <remap from="command_moveJ" to="/mcu_leftarm/all_joints_hjc/command_moveJ"/>
+      <rosparam param="joint_remap" command="load" file="$(find moveit_movej_bridge)/config/leftarm_joint_remap.yaml"/>
+    </node>
+  </group>
+
+  <!-- 右臂 -->
+  <group ns="right_leg_controller">
+    <node pkg="moveit_movej_bridge" type="ftj_to_movej_bridge" name="ftj_to_movej_bridge_rightleg" output="screen">
+      <param name="stream_rate" value="200"/>
+      <remap from="command_moveJ" to="/mcu_rightleg/all_joints_hjc/command_moveJ"/>
+      <!-- 把 YAML 中的 right_arm 节点部分加载到 joint_remap 参数下 -->
+      <rosparam param="joint_remap" command="load" file="$(find moveit_movej_bridge)/config/rightleg_joint_remap.yaml"/>
+    </node>
+  </group>
+
+  <!-- 左臂 -->
+  <group ns="left_leg_controller">
+    <node pkg="moveit_movej_bridge" type="ftj_to_movej_bridge" name="ftj_to_movej_bridge_leftleg" output="screen">
+      <param name="stream_rate" value="200"/>
+      <remap from="command_moveJ" to="/mcu_leftleg/all_joints_hjc/command_moveJ"/>
+      <rosparam param="joint_remap" command="load" file="$(find moveit_movej_bridge)/config/leftleg_joint_remap.yaml"/>
+    </node>
+  </group>
+
+  <group ns="neck_controller">
+    <node pkg="moveit_movej_bridge" type="ftj_to_movej_bridge" name="ftj_to_movej_bridge_neck" output="screen">
+      <param name="stream_rate" value="200"/>
+      <remap from="command_moveJ" to="/mcu_neck/all_joints_hjc/command_moveJ"/>
+      <rosparam param="joint_remap" command="load" file="$(find moveit_movej_bridge)/config/neck_joint_remap.yaml"/>
+    </node>
+  </group>
+  <node pkg="moveit_movej_bridge" type="joint_states_merger" name="joint_states_merger" output="screen">
+  <rosparam command="load" file="$(find moveit_movej_bridge)/config/leftarm_joint_remap1.yaml" param="left_arm_joint_remap"/>
+  <rosparam command="load" file="$(find moveit_movej_bridge)/config/rightarm_joint_remap1.yaml" param="right_arm_joint_remap"/>
+  <rosparam command="load" file="$(find moveit_movej_bridge)/config/leftleg_joint_remap1.yaml" param="left_leg_joint_remap"/>
+  <rosparam command="load" file="$(find moveit_movej_bridge)/config/rightleg_joint_remap1.yaml" param="right_leg_joint_remap"/>
+  <rosparam command="load" file="$(find moveit_movej_bridge)/config/neck_joint_remap1.yaml" param="neck_joint_remap"/>
+</node>
+
+
+
+
+  
+</launch>

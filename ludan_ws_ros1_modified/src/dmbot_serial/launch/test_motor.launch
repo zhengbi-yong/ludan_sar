@@ -1,0 +1,8 @@
+<launch>
+  <node name="test_motor" pkg="dmbot_serial" type="test_motor" output="screen">
+    <param name="pos_amp" value="0.05"/>     <!-- 小幅度 0.05 rad -->
+    <param name="freq"    value="0.2"/>
+    <param name="kp"      value="2.0"/>
+    <param name="kd"      value="0.1"/>
+  </node>
+</launch>

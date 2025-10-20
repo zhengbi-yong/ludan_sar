@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="yeah">
+  <link
+    name="Body_Base">
+    <inertial>
+      <origin
+        xyz="-0.000984778969804825 0.159999918319187 -0.0569571874345381"
+        rpy="0 0 0" />
+      <mass
+        value="4.29822002793714" />
+      <inertia
+        ixx="0.0765802499361531"
+        ixy="6.20277192134588E-08"
+        ixz="0.000748099972946707"
+        iyy="0.0663529790747971"
+        iyz="1.72067807092044E-09"
+        izz="0.0502142373391222" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/Body_Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/Body_Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LeftShoulderPitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.0118884051145213 -0.0958707585796716 -2.00008868853352E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.76808266526681" />
+      <inertia
+        ixx="0.000903137600450535"
+        ixy="-2.03885540151788E-05"
+        ixz="5.88736093137122E-09"
+        iyy="0.000439750844099894"
+        iyz="2.12578992625761E-07"
+        izz="0.000730377051545063" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftShoulderPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftShoulderPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftShoulderPitch"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body_Base" />
+    <child
+      link="LeftShoulderPitch_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LeftShoulderRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.0481808462755143 0.000134924626469746 -0.0299316642060652"
+        rpy="0 0 0" />
+      <mass
+        value="0.21174280607146" />
+      <inertia
+        ixx="0.000208397984531029"
+        ixy="1.36465757992387E-17"
+        ixz="-7.38663330295468E-05"
+        iyy="0.000254436493529271"
+        iyz="2.14414560631933E-17"
+        izz="0.000201760045685172" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftShoulderRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftShoulderRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftShoulderRoll"
+    type="continuous">
+    <origin
+      xyz="-0.0457862201502336 -0.101884924626422 9.29530337989704E-05"
+      rpy="0 0 0" />
+    <parent
+      link="LeftShoulderPitch_Link" />
+    <child
+      link="LeftShoulderRoll_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="LeftShoulderYaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.000252551409176599 -0.00824171475617247 -0.0831506652226813"
+        rpy="0 0 0" />
+      <mass
+        value="1.26036454362227" />
+      <inertia
+        ixx="0.00253833469960683"
+        ixy="-1.69459013437106E-07"
+        ixz="3.03726690632612E-07"
+        iyy="0.00253179661999221"
+        iyz="-0.000274198273884283"
+        izz="0.000875832278724056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftShoulderYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftShoulderYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftShoulderYaw"
+    type="continuous">
+    <origin
+      xyz="0.0314999999999971 0.000134924626422839 -0.0534482151393814"
+      rpy="0 0 0" />
+    <parent
+      link="LeftShoulderRoll_Link" />
+    <child
+      link="LeftShoulderYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="LeftElbowPitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.000249999999992354 0.0456042733251177 -0.0190374268432217"
+        rpy="0 0 0" />
+      <mass
+        value="0.106065791565823" />
+      <inertia
+        ixx="6.94131147891919E-05"
+        ixy="1.27689558947316E-18"
+        ixz="-5.45847030808275E-18"
+        iyy="7.41879260654164E-05"
+        iyz="-1.92424056971676E-05"
+        izz="5.5934945492048E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftElbowPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftElbowPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftElbowPitch"
+    type="continuous">
+    <origin
+      xyz="0 -0.0280000000000016 -0.183500000000001"
+      rpy="0 0 0" />
+    <parent
+      link="LeftShoulderYaw_Link" />
+    <child
+      link="LeftElbowPitch_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LeftElbowYaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.000217173254179463 -0.00281066704324645 -0.0732161416514601"
+        rpy="0 0 0" />
+      <mass
+        value="0.75793905190884" />
+      <inertia
+        ixx="0.00039617017835574"
+        ixy="2.87989632730269E-07"
+        ixz="6.12083837350659E-08"
+        iyy="0.000421409135299627"
+        iyz="-4.00420186079024E-05"
+        izz="0.000318857221902468" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftElbowYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftElbowYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftElbowYaw"
+    type="continuous">
+    <origin
+      xyz="0 0.0323000000000016 -0.0429499999999954"
+      rpy="0 0 0" />
+    <parent
+      link="LeftElbowPitch_Link" />
+    <child
+      link="LeftElbowYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="LeftWristPitch_Link">
+    <inertial>
+      <origin
+        xyz="0.00133791172432937 0.0341906328512787 -0.0534431493088246"
+        rpy="0 0 0" />
+      <mass
+        value="0.42226683432476" />
+      <inertia
+        ixx="0.000256504293798981"
+        ixy="-1.30931402455396E-05"
+        ixz="-3.38905353638004E-05"
+        iyy="0.00024177007172023"
+        iyz="-3.29706941462471E-05"
+        izz="0.000178275804432396" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftWristPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftWristPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftWristPitch"
+    type="continuous">
+    <origin
+      xyz="0 -0.0270000000000015 -0.122350000000005"
+      rpy="0 0 0" />
+    <parent
+      link="LeftElbowYaw_Link" />
+    <child
+      link="LeftWristPitch_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LeftWristRoll_Link">
+    <inertial>
+      <origin
+        xyz="-0.0188568585065403 4.9293902293357E-14 -0.0366968813296825"
+        rpy="0 0 0" />
+      <mass
+        value="0.158679290509597" />
+      <inertia
+        ixx="7.71223907395444E-05"
+        ixy="7.52048720993343E-18"
+        ixz="-3.4739828441325E-05"
+        iyy="0.000103951082639342"
+        iyz="9.74545951327324E-18"
+        izz="5.98820937872405E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftWristRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftWristRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftWristRoll"
+    type="continuous">
+    <origin
+      xyz="0.0292499999999982 0.0312999999999996 -0.0619999999999982"
+      rpy="0 0 0" />
+    <parent
+      link="LeftWristPitch_Link" />
+    <child
+      link="LeftWristRoll_Link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="RightShoulderPitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.0118884044926476 0.0959686201612704 -1.63983461911321E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.768082713380196" />
+      <inertia
+        ixx="0.000903137615113295"
+        ixy="2.03788412641471E-05"
+        ixz="2.22721926600665E-08"
+        iyy="0.000439718163188342"
+        iyz="-1.94715055722326E-07"
+        izz="0.000730409750501336" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightShoulderPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightShoulderPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightShoulderPitch"
+    type="continuous">
+    <origin
+      xyz="0 0.319899999999998 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body_Base" />
+    <child
+      link="RightShoulderPitch_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RightShoulderRoll_Link">
+    <inertial>
+      <origin
+        xyz="-0.0123191537244823 3.33066907387547E-16 -0.0298387111721881"
+        rpy="0 0 0" />
+      <mass
+        value="0.21174280607146" />
+      <inertia
+        ixx="0.000208397984531028"
+        ixy="1.99099693068067E-20"
+        ixz="-7.38663330295466E-05"
+        iyy="0.00025443649352927"
+        iyz="3.72596351937519E-20"
+        izz="0.000201760045685172" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightShoulderRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightShoulderRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightShoulderRoll"
+    type="continuous">
+    <origin
+      xyz="0.0149637798497616 0.101849999999999 0"
+      rpy="0 0 0" />
+    <parent
+      link="RightShoulderPitch_Link" />
+    <child
+      link="RightShoulderRoll_Link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="RightShoulderYaw_Link">
+    <inertial>
+      <origin
+        xyz="-3.43646131295422E-05 0.00824388137169668 -0.0833640411194251"
+        rpy="0 0 0" />
+      <mass
+        value="1.26036454362165" />
+      <inertia
+        ixx="0.00253846799083536"
+        ixy="2.47245847308271E-07"
+        ixz="3.03866813553406E-07"
+        iyy="0.00253176319180196"
+        iyz="0.000274146676656519"
+        izz="0.000875732415683321" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightShoulderYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightShoulderYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightShoulderYaw"
+    type="continuous">
+    <origin
+      xyz="-0.0292499999999986 0 -0.0531052621055809"
+      rpy="0 0 0" />
+    <parent
+      link="RightShoulderRoll_Link" />
+    <child
+      link="RightShoulderYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="RightElbowPitch_Link">
+    <inertial>
+      <origin
+        xyz="9.78384040450919E-16 -0.0456042733250627 -0.0190374268431462"
+        rpy="0 0 0" />
+      <mass
+        value="0.106065791565823" />
+      <inertia
+        ixx="6.9413114789192E-05"
+        ixy="4.88924864920825E-20"
+        ixz="-3.92650326253871E-22"
+        iyy="7.41879260654161E-05"
+        iyz="1.92424056971678E-05"
+        izz="5.59349454920484E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightElbowPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightElbowPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightElbowPitch"
+    type="continuous">
+    <origin
+      xyz="0 0.0280000000000016 -0.183750000000001"
+      rpy="0 0 0" />
+    <parent
+      link="RightShoulderYaw_Link" />
+    <child
+      link="RightElbowPitch_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RightElbowYaw_Link">
+    <inertial>
+      <origin
+        xyz="-3.28490509191176E-05 0.00275705489501876 -0.077248229137106"
+        rpy="0 0 0" />
+      <mass
+        value="0.757939051908938" />
+      <inertia
+        ixx="0.000396062585911895"
+        ixy="-2.69294079931415E-07"
+        ixz="-1.08072980902223E-07"
+        iyy="0.000421508380121659"
+        iyz="4.0073703786051E-05"
+        izz="0.000318865569524394" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightElbowYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightElbowYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightElbowYaw"
+    type="continuous">
+    <origin
+      xyz="0 -0.0323000000000016 -0.0389999999999954"
+      rpy="0 0 0" />
+    <parent
+      link="RightElbowPitch_Link" />
+    <child
+      link="RightElbowYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="RightWristPitch_Link">
+    <inertial>
+      <origin
+        xyz="0.00158791172432258 -0.0341917033476763 -0.0535906144633544"
+        rpy="0 0 0" />
+      <mass
+        value="0.422266834324869" />
+      <inertia
+        ixx="0.000256504293799037"
+        ixy="1.30924766167651E-05"
+        ixz="-3.39819528704547E-05"
+        iyy="0.000241768614770396"
+        iyz="3.28703491089935E-05"
+        izz="0.000178277261382301" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightWristPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightWristPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightWristPitch"
+    type="continuous">
+    <origin
+      xyz="0 0.0270000000000019 -0.126300000000005"
+      rpy="0 0 0" />
+    <parent
+      link="RightElbowYaw_Link" />
+    <child
+      link="RightWristPitch_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RightWristRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.0336431414934496 3.10862446895044E-15 -0.0366968813296171"
+        rpy="0 0 0" />
+      <mass
+        value="0.158679290509597" />
+      <inertia
+        ixx="7.71223907395443E-05"
+        ixy="3.17062369351938E-19"
+        ixz="-3.4739828441325E-05"
+        iyy="0.000103951082639342"
+        iyz="4.16093074907053E-19"
+        izz="5.98820937872405E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightWristRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightWristRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightWristRoll"
+    type="continuous">
+    <origin
+      xyz="-0.0230000000000018 -0.0313000000000005 -0.0619999999999975"
+      rpy="0 0 0" />
+    <parent
+      link="RightWristPitch_Link" />
+    <child
+      link="RightWristRoll_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="NeckYaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.00581531764903294 -9.23145291096611E-05 0.0618575190113002"
+        rpy="0 0 0" />
+      <mass
+        value="0.647827437019055" />
+      <inertia
+        ixx="0.000968388363877706"
+        ixy="3.26067011193511E-07"
+        ixz="0.000100708265498924"
+        iyy="0.000802029141541807"
+        iyz="-3.92170762280888E-06"
+        izz="0.00042317047742928" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/NeckYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/NeckYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="NeckYaw"
+    type="continuous">
+    <origin
+      xyz="-0.024999999999998 0.159999999999999 0.113999999999997"
+      rpy="0 0 0" />
+    <parent
+      link="Body_Base" />
+    <child
+      link="NeckYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="NeckRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.0332886885570809 -0.00060358428937422 -1.66223746521088E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.394220087865093" />
+      <inertia
+        ixx="0.000151722204600015"
+        ixy="-4.80083051544494E-06"
+        ixz="4.68503011295458E-08"
+        iyy="0.000184537252474753"
+        iyz="4.48818192062032E-08"
+        izz="0.000185446370442512" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/NeckRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/NeckRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="NeckRoll"
+    type="continuous">
+    <origin
+      xyz="-0.0126000000000049 0 0.142"
+      rpy="0 0 0" />
+    <parent
+      link="NeckYaw_Link" />
+    <child
+      link="NeckRoll_Link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="NeckPitch_Link">
+    <inertial>
+      <origin
+        xyz="0.0219238937636143 0.0142556993887718 0.180248976862389"
+        rpy="0 0 0" />
+      <mass
+        value="0.73430627866614" />
+      <inertia
+        ixx="0.00677083516526997"
+        ixy="2.56564683275943E-05"
+        ixz="-0.000249890693270657"
+        iyy="0.00578630005199225"
+        iyz="-4.865358653122E-05"
+        izz="0.00326097668638142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/NeckPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/NeckPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="NeckPitch"
+    type="continuous">
+    <origin
+      xyz="0.0410000000000003 -0.0194999999999999 0"
+      rpy="0 0 0" />
+    <parent
+      link="NeckRoll_Link" />
+    <child
+      link="NeckPitch_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="waist_Link">
+    <inertial>
+      <origin
+        xyz="6.88423641103178E-06 -3.21956409248814E-05 -0.081486561696211"
+        rpy="0 0 0" />
+      <mass
+        value="12.3027675516516" />
+      <inertia
+        ixx="0.0186581769390268"
+        ixy="-7.48421046227594E-05"
+        ixz="-1.91030358252151E-05"
+        iyy="0.024256540694553"
+        iyz="-1.64804804732282E-05"
+        izz="0.0229789919480801" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/waist_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/waist_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist"
+    type="continuous">
+    <origin
+      xyz="-0.0499973128926486 0.160000551429758 -0.294200000000003"
+      rpy="0 0 0" />
+    <parent
+      link="Body_Base" />
+    <child
+      link="waist_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="LeftLegPitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.0163108978901145 -0.0785390325818988 -0.0339870181545555"
+        rpy="0 0 0" />
+      <mass
+        value="4.20544206469336" />
+      <inertia
+        ixx="0.00838404338908189"
+        ixy="-0.000212883243199451"
+        ixz="-0.000100922410802761"
+        iyy="0.00471375132116843"
+        iyz="-0.000148298615333334"
+        izz="0.0050459788788933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftLegPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftLegPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftLegPitch"
+    type="continuous">
+    <origin
+      xyz="0 -0.0695005514297602 -0.112"
+      rpy="0 0 0" />
+    <parent
+      link="waist_Link" />
+    <child
+      link="LeftLegPitch_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="LeftLegRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.00293424472235439 -0.000195776194269276 -0.119629561783692"
+        rpy="0 0 0" />
+      <mass
+        value="4.18093024068917" />
+      <inertia
+        ixx="0.0048756990487451"
+        ixy="-1.2053393414344E-05"
+        ixz="-0.000103105703072599"
+        iyy="0.00461953422100567"
+        iyz="5.14214762335043E-06"
+        izz="0.00715007492992493" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftLegRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftLegRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftLegRoll"
+    type="continuous">
+    <origin
+      xyz="-0.000999999999867083 -0.0830005122956424 -0.0349973051579167"
+      rpy="0 0 0" />
+    <parent
+      link="LeftLegPitch_Link" />
+    <child
+      link="LeftLegRoll_Link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="LeftLegYaw_Link">
+    <inertial>
+      <origin
+        xyz="0.00217038695390543 0.00928328529106193 -0.153717923699938"
+        rpy="0 0 0" />
+      <mass
+        value="7.03642767886962" />
+      <inertia
+        ixx="0.024258167042962"
+        ixy="-0.000147573164818517"
+        ixz="7.74784737901949E-05"
+        iyy="0.0292608984545894"
+        iyz="0.00129563041381848"
+        izz="0.00940133038008645" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftLegYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/LeftLegYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftLegYaw"
+    type="continuous">
+    <origin
+      xyz="0.000186365653050757 -0.000688387105119953 -0.111002694842087"
+      rpy="0 0 0" />
+    <parent
+      link="LeftLegRoll_Link" />
+    <child
+      link="LeftLegYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="kneePitch_Link">
+    <inertial>
+      <origin
+        xyz="0.00123795884617685 0.00519727052806915 -0.15899701890059"
+        rpy="0 0 0" />
+      <mass
+        value="4.57121235016414" />
+      <inertia
+        ixx="0.020176383034396"
+        ixy="2.05037974891047E-06"
+        ixz="-0.000963731985476246"
+        iyy="0.021526140840187"
+        iyz="0.000403971498324297"
+        izz="0.00288096454033477" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/kneePitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/kneePitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kneePitch"
+    type="continuous">
+    <origin
+      xyz="0.000161065264847403 -0.00491635657912468 -0.281838999812232"
+      rpy="0 0 0" />
+    <parent
+      link="LeftLegYaw_Link" />
+    <child
+      link="kneePitch_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="AnklePitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.00147541181237309 0.0186055119191103 -0.0207327359859442"
+        rpy="0 0 0" />
+      <mass
+        value="0.387868176211924" />
+      <inertia
+        ixx="0.000141876313147312"
+        ixy="-2.26004410194377E-06"
+        ixz="1.6633100331336E-06"
+        iyy="0.000297242402247216"
+        iyz="2.41900565732042E-08"
+        izz="0.000170375284782386" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/AnklePitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/AnklePitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="AnklePitch"
+    type="continuous">
+    <origin
+      xyz="-0.0193627391441421 -0.0129038883271191 -0.330161000187765"
+      rpy="0 0 0" />
+    <parent
+      link="kneePitch_Link" />
+    <child
+      link="AnklePitch_Link" />
+    <axis
+      xyz="-0.0145419603178007 0.999894260104595 0" />
+  </joint>
+  <link
+    name="AnkleRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.070912672454587 0.000976253829471391 -0.0101386617134354"
+        rpy="0 0 0" />
+      <mass
+        value="1.6053813423159" />
+      <inertia
+        ixx="0.000989699451714058"
+        ixy="-1.47790854999892E-05"
+        ixz="4.78443448236703E-05"
+        iyy="0.00259615595962316"
+        iyz="2.78896202837769E-07"
+        izz="0.00291141561350013" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/AnkleRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/AnkleRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="AnkleRoll"
+    type="continuous">
+    <origin
+      xyz="-0.0452239664958971 0.017969254940941 -0.0324467156465094"
+      rpy="0 0 0" />
+    <parent
+      link="AnklePitch_Link" />
+    <child
+      link="AnkleRoll_Link" />
+    <axis
+      xyz="0.99821055060206 0.0145174732917734 -0.058008099744385" />
+  </joint>
+  <link
+    name="RightLegPitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.0202871075606412 0.113203120094287 -0.0332957316731161"
+        rpy="0 0 0" />
+      <mass
+        value="4.20544138183995" />
+      <inertia
+        ixx="0.00836869162576329"
+        ixy="0.000319240472853325"
+        ixz="-0.000105164563332035"
+        iyy="0.00472936678233725"
+        iyz="0.000145363741817256"
+        izz="0.00504598273461048" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightLegPitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightLegPitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightLegPitch"
+    type="continuous">
+    <origin
+      xyz="-0.000324901518056385 0.0342983897075141 -0.112691468926412"
+      rpy="0 0 0" />
+    <parent
+      link="waist_Link" />
+    <child
+      link="RightLegPitch_Link" />
+    <axis
+      xyz="-0.0145419603178106 0.999894260104595 0" />
+  </joint>
+  <link
+    name="RightLegRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.000710473631350846 0.000218336647039685 -0.11962970293313"
+        rpy="0 0 0" />
+      <mass
+        value="4.18101136276925" />
+      <inertia
+        ixx="0.00487493061379373"
+        ixy="1.9479126148004E-05"
+        ixz="-0.000102896944241352"
+        iyy="0.00462061859149247"
+        iyz="-8.13584051580519E-06"
+        izz="0.00715037817098106" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightLegRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightLegRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightLegRoll"
+    type="continuous">
+    <origin
+      xyz="-0.00289532111270099 0.11816986314249 -0.0343058418694641"
+      rpy="0 0 0" />
+    <parent
+      link="RightLegPitch_Link" />
+    <child
+      link="RightLegRoll_Link" />
+    <axis
+      xyz="-0.999894260104595 -0.0145419603178012 0" />
+  </joint>
+  <link
+    name="RightLegYaw_Link">
+    <inertial>
+      <origin
+        xyz="0.000194771151298824 -0.011047445308898 -0.152772455288883"
+        rpy="0 0 0" />
+      <mass
+        value="6.78843671701909" />
+      <inertia
+        ixx="0.0225933510104825"
+        ixy="6.3374908724311E-06"
+        ixz="0.000101784596845481"
+        iyy="0.0272895334001572"
+        iyz="-0.00129563456593361"
+        izz="0.00907171886706066" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightLegYaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RightLegYaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightLegYaw"
+    type="continuous">
+    <origin
+      xyz="0.000176334005005392 0.000692084399336018 -0.111002689204124"
+      rpy="0 0 0" />
+    <parent
+      link="RightLegRoll_Link" />
+    <child
+      link="RightLegYaw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="RkneePitch_Link">
+    <inertial>
+      <origin
+        xyz="0.000142708786412794 -0.0537032734127277 -0.161636015953503"
+        rpy="0 0 0" />
+      <mass
+        value="4.57121122410793" />
+      <inertia
+        ixx="0.0201776430539964"
+        ixy="-4.12824126073902E-05"
+        ixz="-0.000951576552435556"
+        iyy="0.0215248797553251"
+        iyz="-0.000431826903378456"
+        izz="0.00288096383817099" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RkneePitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RkneePitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RkneePitch"
+    type="continuous">
+    <origin
+      xyz="-0.00096306174335796 0.0534027234981932 -0.2792"
+      rpy="0 0 0" />
+    <parent
+      link="RightLegYaw_Link" />
+    <child
+      link="RkneePitch_Link" />
+    <axis
+      xyz="0.0145419603178007 -0.999894260104595 0" />
+  </joint>
+  <link
+    name="RAnklePitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.00147759310775098 0.0187554961496084 -0.0207327359859442"
+        rpy="0 0 0" />
+      <mass
+        value="0.387868176211925" />
+      <inertia
+        ixx="0.000141876313168029"
+        ixy="-2.26004481403083E-06"
+        ixz="1.66331002470554E-06"
+        iyy="0.000297242402226499"
+        iyz="2.41906360698903E-08"
+        izz="0.000170375284782386" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RAnklePitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RAnklePitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RAnklePitch"
+    type="continuous">
+    <origin
+      xyz="-0.0204318009009505 -0.0736049014124989 -0.3328"
+      rpy="0 0 0" />
+    <parent
+      link="RkneePitch_Link" />
+    <child
+      link="RAnklePitch_Link" />
+    <axis
+      xyz="-0.0145419603178007 0.999894260104595 0" />
+  </joint>
+  <link
+    name="RAnkleRoll_Link">
+    <inertial>
+      <origin
+        xyz="0.0709137306716707 0.00108713664295712 -0.0101390629257088"
+        rpy="0 0 0" />
+      <mass
+        value="1.60542228869078" />
+      <inertia
+        ixx="0.000990225545740487"
+        ixy="-3.18788319166402E-05"
+        ixz="4.78173284002225E-05"
+        iyy="0.0025958984291276"
+        iyz="1.08113459707771E-06"
+        izz="0.00291165630965208" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RAnkleRoll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeah/meshes/RAnkleRoll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RAnkleRoll"
+    type="continuous">
+    <origin
+      xyz="-0.0452261477899444 0.0181192390799569 -0.0324467156465098"
+      rpy="0 0 0" />
+    <parent
+      link="RAnklePitch_Link" />
+    <child
+      link="RAnkleRoll_Link" />
+    <axis
+      xyz="0.99821055060206 0.0145174732917734 -0.0580080997443849" />
+  </joint>
+</robot>

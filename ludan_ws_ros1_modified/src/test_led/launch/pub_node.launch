@@ -1,0 +1,7 @@
+<launch>
+  <!-- 启动 pub_node 节点 -->
+  <node pkg="test_led" type="pub_node" name="pub_node" output="screen">
+    <!-- 设置默认发送值 '0' (ASCII 48) -->
+    <param name="send_value" value="'0'" />
+  </node>
+</launch>

@@ -1,0 +1,89 @@
+controller_list:
+  - name: fake_left_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - LeftShoulderRoll
+      - LeftShoulderYaw
+      - LeftElbowPitch
+      - LeftElbowYaw
+      - LeftWristPitch
+      - LeftWristRoll
+  - name: fake_right_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - RightShoulderRoll
+      - RightShoulderYaw
+      - RightElbowPitch
+      - RightElbowYaw
+      - RightWristPitch
+      - RightWristRoll
+  - name: fake_left_leg_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - LeftLegRoll
+      - LeftLegYaw
+      - kneePitch
+      - AnklePitch
+      - AnkleRoll
+  - name: fake_right_leg_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - RightLegRoll
+      - RightLegYaw
+      - RkneePitch
+      - RAnklePitch
+      - RAnkleRoll
+  - name: fake_neck_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - NeckRoll
+      - NeckPitch
+  - name: fake_upper_body_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - LeftShoulderRoll
+      - LeftShoulderYaw
+      - LeftElbowPitch
+      - LeftElbowYaw
+      - LeftWristPitch
+      - LeftWristRoll
+      - NeckRoll
+      - NeckPitch
+      - RightShoulderRoll
+      - RightShoulderYaw
+      - RightElbowPitch
+      - RightElbowYaw
+      - RightWristPitch
+      - RightWristRoll
+  - name: fake_whole_body_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - LeftShoulderRoll
+      - LeftShoulderYaw
+      - LeftElbowPitch
+      - LeftElbowYaw
+      - LeftWristPitch
+      - LeftWristRoll
+      - NeckRoll
+      - NeckPitch
+      - RightShoulderRoll
+      - RightShoulderYaw
+      - RightElbowPitch
+      - RightElbowYaw
+      - RightWristPitch
+      - RightWristRoll
+      - LeftLegRoll
+      - LeftLegYaw
+      - kneePitch
+      - AnklePitch
+      - AnkleRoll
+      - RightLegRoll
+      - RightLegYaw
+      - RkneePitch
+      - RAnklePitch
+      - RAnkleRoll
+initial:  # Define initial robot poses per group
+#  - group: left_arm
+#    pose: home
+
+  []

@@ -1,0 +1,6 @@
+  RightLegPitch:        leg_r1_joint
+  RightLegRoll:         leg_r2_joint
+  RightLegYaw:          leg_r3_joint
+  RkneePitch:           leg_r4_joint
+  RAnklePitch:             leg_r5_joint
+  RAnkleRoll:           leg_r6_joint

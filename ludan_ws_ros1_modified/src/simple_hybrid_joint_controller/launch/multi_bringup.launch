@@ -1,0 +1,53 @@
+<launch>
+  <!-- 右臂 MCU -->
+  <group ns="mcu_rightarm">
+    <arg name="port" default="/dev/mcu_rightarm"/>
+    <arg name="baud" default="921600"/>
+    <include file="$(find simple_hybrid_joint_controller)/launch/bringup_real.launch">
+      <arg name="port" value="$(arg port)"/>
+      <arg name="baud" value="$(arg baud)"/>
+      <arg name="ns" value="/mcu_rightarm"/>
+    </include>
+  </group>
+  <!-- left arm MCU -->
+    <group ns="mcu_leftarm">
+      <arg name="port" default="/dev/mcu_leftarm"/>
+      <arg name="baud" default="921600"/>
+      <include file="$(find simple_hybrid_joint_controller)/launch/bringup_real.launch">
+        <arg name="port" value="$(arg port)"/>
+        <arg name="baud" value="$(arg baud)"/>
+        <arg name="ns" value="/mcu_leftarm"/>
+      </include>
+    </group>
+  <!-- neck MCU -->
+  <group ns="mcu_neck">
+    <arg name="port" default="/dev/mcu_neck"/>
+    <arg name="baud" default="921600"/>
+    <include file="$(find simple_hybrid_joint_controller)/launch/bringup_real.launch">
+      <arg name="port" value="$(arg port)"/>
+      <arg name="baud" value="$(arg baud)"/>
+      <arg name="ns" value="/mcu_neck"/>
+    </include>
+  </group>
+  <!-- left leg MCU -->
+    <group ns="mcu_leftleg">
+      <arg name="port" default="/dev/mcu_leftleg"/>
+      <arg name="baud" default="921600"/>
+      <include file="$(find simple_hybrid_joint_controller)/launch/bringup_real.launch">
+        <arg name="port" value="$(arg port)"/>
+        <arg name="baud" value="$(arg baud)"/>
+        <arg name="ns" value="/mcu_leftleg"/>
+      </include>
+    </group>
+    <!-- right leg MCU -->
+    <group ns="mcu_rightleg">
+      <arg name="port" default="/dev/mcu_rightleg"/>
+      <arg name="baud" default="921600"/>
+      <include file="$(find simple_hybrid_joint_controller)/launch/bringup_real.launch">
+        <arg name="port" value="$(arg port)"/>
+        <arg name="baud" value="$(arg baud)"/>
+        <arg name="ns" value="/mcu_rightleg"/>
+      </include>
+    </group>
+
+</launch>

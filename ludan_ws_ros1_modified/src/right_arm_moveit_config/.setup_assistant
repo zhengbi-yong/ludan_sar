@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: wanren_arm
+    relative_path: urdf/wanren_arm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/wanren_arm.srdf
+  CONFIG:
+    author_name: zhengbi
+    author_email: zhengbi.yong@outlook.com
+    generated_timestamp: 1757676883

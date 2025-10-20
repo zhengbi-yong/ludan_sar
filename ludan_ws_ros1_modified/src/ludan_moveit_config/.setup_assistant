@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: yeah
+    relative_path: urdf/yeah.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/yeah.srdf
+  CONFIG:
+    author_name: ludan
+    author_email: 2779723622@qq.com
+    generated_timestamp: 1760161127

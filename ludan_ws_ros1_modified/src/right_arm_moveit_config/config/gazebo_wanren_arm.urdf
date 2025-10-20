@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="wanren_arm">
+    <link name="body">
+        <inertial>
+            <origin xyz="1.58624299813302E-05 2.01332320114156E-07 -0.0245724500252954" rpy="0 0 0" />
+            <mass value="0.60016209200883" />
+            <inertia ixx="0.00242953311427902" ixy="-5.25284926483854E-09" ixz="-1.0307989110718E-08" iyy="0.000676060412175399" iyz="-4.23866154122213E-09" izz="0.00270966081437587" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/body.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/body.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="leg_r1_link">
+        <inertial>
+            <origin xyz="-0.00382422792815949 -0.0123142355221975 0.0766747228132015" rpy="0 0 0" />
+            <mass value="0.292899916417866" />
+            <inertia ixx="0.000252199489311626" ixy="1.84502350325129E-05" ixz="3.06532558789357E-06" iyy="0.000305653266020346" iyz="9.64612915614931E-06" izz="0.000181236852257132" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r1_joint" type="continuous">
+        <origin xyz="0 0 0.011999999999999" rpy="0 0 0" />
+        <parent link="body" />
+        <child link="leg_r1_link" />
+        <axis xyz="0 0 -1" />
+    </joint>
+    <link name="leg_r2_link">
+        <inertial>
+            <origin xyz="0.0284932164900757 0.0852314382000906 0.0233442478183801" rpy="0 0 0" />
+            <mass value="0.118782011304387" />
+            <inertia ixx="0.000148335029284927" ixy="-8.65175116738488E-06" ixz="-1.27967801985177E-05" iyy="0.000134918605784322" iyz="-4.16906433393106E-05" izz="0.000154509301437256" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r2_joint" type="continuous">
+        <origin xyz="-0.0136812977041495 -0.0436944371355362 0.0808116620061236" rpy="0 0 0" />
+        <parent link="leg_r1_link" />
+        <child link="leg_r2_link" />
+        <axis xyz="0.29752487908452 0.954714065218347 0" />
+    </joint>
+    <link name="leg_r3_link">
+        <inertial>
+            <origin xyz="0.00440804925886197 -0.000927955750798931 0.0105438054247052" rpy="0 0 0" />
+            <mass value="0.395227613542105" />
+            <inertia ixx="0.000308890320718613" ixy="-5.97376048863321E-06" ixz="-4.28271122717806E-07" iyy="0.000290511069752979" iyz="-7.01321630599807E-06" izz="0.000217174460223541" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r3_joint" type="continuous">
+        <origin xyz="0.0412068272569313 0.104588881771451 0.106228185949221" rpy="0 0 0" />
+        <parent link="leg_r2_link" />
+        <child link="leg_r3_link" />
+        <axis xyz="-0.0722349306802614 0.022511126419206 -0.997133573788866" />
+    </joint>
+    <link name="leg_r4_link">
+        <inertial>
+            <origin xyz="0.0155060558890136 0.0411774297341984 0.0346709586399187" rpy="0 0 0" />
+            <mass value="0.0222841339329651" />
+            <inertia ixx="1.84809601603307E-05" ixy="-7.49503824125524E-07" ixz="7.29303214418526E-07" iyy="1.42244264185631E-05" iyz="5.6744596945616E-06" izz="8.89285098125665E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r4_joint" type="continuous">
+        <origin xyz="-0.00228042956033238 -0.0297792321778995 0.0833604475054363" rpy="0 0 0" />
+        <parent link="leg_r3_link" />
+        <child link="leg_r4_link" />
+        <axis xyz="0.282983296167026 0.959124144572578 0.0011529910516605" />
+    </joint>
+    <link name="leg_r5_link">
+        <inertial>
+            <origin xyz="-0.0048559147531092 -0.0119363039004067 -0.00678188706287566" rpy="0 0 0" />
+            <mass value="0.38824624930896" />
+            <inertia ixx="0.000237526648339387" ixy="-5.31429070295641E-05" ixz="2.19325891659962E-05" iyy="0.000363875907133575" iyz="1.18765086359219E-05" izz="0.000378463701930693" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r5_joint" type="continuous">
+        <origin xyz="0.0181511434262854 0.025007599076044 0.111134888878763" rpy="0 1.26722046551249 0" />
+        <parent link="leg_r4_link" />
+        <child link="leg_r5_link" />
+        <axis xyz="0.923719785557326 0.0273056458564005 -0.382094437900229" />
+    </joint>
+    <link name="leg_r6_link">
+        <inertial>
+            <origin xyz="0.0651691107467127 0.0806102275858783 -0.0545046281847596" rpy="0 0 0" />
+            <mass value="0.174871084341935" />
+            <inertia ixx="0.000144391761957596" ixy="-1.80182197600083E-05" ixz="1.3262109156489E-05" iyy="7.06944905975503E-05" iyz="1.59148040690902E-05" izz="0.000136401918690474" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r6.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r6.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r6_joint" type="continuous">
+        <origin xyz="-0.0550712045826083 -0.0332459772838745 -0.000878918231283499" rpy="1.5372364468678 -1.26722046551249 0" />
+        <parent link="leg_r5_link" />
+        <child link="leg_r6_link" />
+        <axis xyz="0.565655964466871 0 -0.824641334073823" />
+    </joint>
+    <link name="leg_r7_link">
+        <inertial>
+            <origin xyz="0.122014637753753 -0.108460665221082 -0.0505526819127103" rpy="0 0 0" />
+            <mass value="0.784412251530751" />
+            <inertia ixx="0.00035684591190941" ixy="5.28938521033195E-05" ixz="1.61063033449861E-05" iyy="0.000393694186319801" iyz="-3.02303341596539E-06" izz="0.000403461621026228" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://wanren_arm/meshes/leg_r7.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.05 0.04" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_r7_joint" type="continuous">
+        <origin xyz="0.0506954674848457 0.0975609362242854 -0.0679978120533321" rpy="-1.5372364468678 0 0" />
+        <parent link="leg_r6_link" />
+        <child link="leg_r7_link" />
+        <axis xyz="0.804819794366103 -0.559061164385712 -0.199288015375224" />
+    </joint>
+    <transmission name="trans_leg_r1_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r1_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r1_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_r2_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r2_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r2_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_r3_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r3_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r3_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_r4_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r4_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r4_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_r5_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r5_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r5_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_r6_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r6_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r6_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_r7_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_r7_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_r7_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

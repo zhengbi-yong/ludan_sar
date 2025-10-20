@@ -1,0 +1,17 @@
+right_arm:
+  RightShoulderPitch:        leg_r1_joint
+  RightShoulderRoll:         leg_r2_joint
+  RightShoulderYaw:          leg_r3_joint
+  RightElbowPitch:           leg_r4_joint
+  RightElbowYaw:             leg_r5_joint
+  RightWristPitch:           leg_r6_joint
+  RightWristRoll:            leg_r7_joint
+
+left_arm:
+  LeftShoulderPitch:          leg_r1_joint
+  LeftShoulderRoll:           leg_r2_joint
+  LeftShoulderYaw:            leg_r3_joint
+  LeftElbowPitch:             leg_r4_joint
+  LeftElbowYaw:               leg_r5_joint
+  LeftWristPitch:             leg_r6_joint
+  LeftWristRoll:              leg_r7_joint

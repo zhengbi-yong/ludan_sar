@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>right_arm_hw</name>
+  <version>0.1.0</version>
+  <description>FTJ(Action) → moveJ(topic) bridge for right arm.</description>
+
+  <maintainer email="wanrenaimail@proton.me">WanrenAI</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- 运行桥接节点所需 -->
+  <depend>roscpp</depend>
+  <depend>actionlib</depend>
+  <depend>control_msgs</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <!-- 若将来真要在此包里放 RobotHW/ros_control，再加这些也行 -->
+  <!--
+  <depend>hardware_interface</depend>
+  <depend>controller_manager</depend>
+  <depend>joint_limits_interface</depend>
+  <depend>control_toolbox</depend>
+  <depend>urdf</depend>
+  <depend>joint_state_controller</depend>
+  <depend>joint_trajectory_controller</depend>
+  -->
+
+  <export/>
+</package>
