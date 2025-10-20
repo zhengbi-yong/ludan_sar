@@ -157,7 +157,10 @@ public:
         rl.episode_length_buf = 0;
 
         // read params from yaml
-        rl.config_name = "legged_gym";
+        if (rl.config_name.empty())
+        {
+            rl.config_name = "legged_gym";
+        }
         std::string robot_path = rl.robot_name + "/" + rl.config_name;
         try
         {

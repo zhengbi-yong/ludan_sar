@@ -321,6 +321,21 @@ if(NOT USE_CMAKE)
     endif()
 endif()
 
+if($ENV{ROS_DISTRO} MATCHES "noetic")
+    add_executable(rl_real_gr1t1_ros src/rl_real_gr1t1_ros.cpp)
+    target_link_libraries(rl_real_gr1t1_ros
+        rl_sdk
+        observation_buffer
+        yaml-cpp
+    )
+    target_include_directories(rl_real_gr1t1_ros PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
+    if(NOT USE_CMAKE)
+        target_link_libraries(rl_real_gr1t1_ros ${catkin_LIBRARIES})
+    endif()
+endif()
+
 if(NOT USE_CMAKE)
     if($ENV{ROS_DISTRO} MATCHES "noetic")
         catkin_install_python(PROGRAMS
